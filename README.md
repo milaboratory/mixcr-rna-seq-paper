@@ -7,7 +7,7 @@ The Docker image contains pre-installed software and scripts to generate _in sil
 
 Docker image is already built and deposited in Docker Hub. To run the full analysis just install [Docker](https://www.docker.com) and execute the following line (no any special downloads required, Docker will automatically download the image):
  ```
- docker run -v WORKING_PATH:/work -i milaboratory/rna-seq-paper /bin/bash -c "/opt/scripts/run-comparison.sh && /opt/scripts/run-false-positives.sh" > log 2>errLog
+ docker run -v WORKING_PATH:/work -i milaboratory/rna-seq-paper:v1.0 /bin/bash -c "/opt/scripts/run-comparison.sh && /opt/scripts/run-false-positives.sh" > log 2>errLog
  ```
 where `WORKING_PATH` should be replaced with some particular path at your host computer. Be sure that you have at least ~80Gb of RAM and ~1TB of disk space.
 
