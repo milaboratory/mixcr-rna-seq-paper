@@ -1,0 +1,3 @@
+[submodule "answer_to_Hu_et_al/trust_data"]
+	path = answer_to_Hu_et_al/trust_repo
+	url = https://PoslavskySV@bitbucket.org/liulab/trust.git
