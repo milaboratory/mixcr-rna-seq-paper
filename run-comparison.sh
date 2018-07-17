@@ -269,7 +269,7 @@ if [ -z "${NO_STAR}" ]; then
 			input=$1
 			output=$2
 			thread=$3
-			${STAR_COMMAND} --outTmpDir ${TMP_DIR}${thread} --runThreadN 16 --genomeDir ${STAR_HG_PATH}/ --outSAMtype BAM SortedByCoordinate --outSAMunmapped Within --outStd BAM_SortedByCoordinate --readFilesIn ${input} --outFileNamePrefix ${output} > ${STAR_OUTPUT}/${output}
+			${STAR_COMMAND} --alignEndsType EndToEnd --outTmpDir ${TMP_DIR}${thread} --runThreadN 16 --genomeDir ${STAR_HG_PATH}/ --outSAMtype BAM SortedByCoordinate --outSAMunmapped Within --outStd BAM_SortedByCoordinate --readFilesIn ${input} --outFileNamePrefix ${output} > ${STAR_OUTPUT}/${output}
 			rm ${output}Log* 2>/dev/null || true
 			rm ${output}SJ* 2>/dev/null || true
 			rm -r -f ${TMP_DIR}${thread} 2>/dev/null || true
